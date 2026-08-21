@@ -45,6 +45,10 @@
   gap: 10px;
 }
 
+.description{
+  text-transform: uppercase;
+}
+
 .form input, .tipo {
   padding: 10px 5px;
 }

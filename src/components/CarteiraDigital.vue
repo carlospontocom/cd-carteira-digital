@@ -22,7 +22,9 @@
 
 
   const remover=(id)=>{
-     dadosContas.value = dadosContas.value.filter(item => item.id !== id);
+    if(confirm("Deseja excluir?")){
+      dadosContas.value = dadosContas.value.filter(item => item.id !== id);
+    }
   }
 
 </script>
@@ -50,8 +52,9 @@
       <div class="bar-add">
         <form class="form" @submit.prevent="validarCampos">
           <input type="text" placeholder="R$" v-model="valor">
-          <input type="text" placeholder="Descrição" v-model="descricao">
+          <input type="text" placeholder="Descrição" v-model="descricao" class="description">
           <select class="tipo" v-model="tipo">
+            <option value="">Selecione tipo</option>
             <option value="gastos">Gastos</option>
             <option value="Renda">Renda</option>
           </select>
@@ -65,7 +68,7 @@
         <li v-for="itemLista in dadosContas" :key="itemLista.id">
           <h3>R$ {{ itemLista.valor }}</h3>
           <div>
-            <h4>{{itemLista.descricao}}</h4>
+            <h4 class="description">{{itemLista.descricao}}</h4>
             <span>{{ itemLista.tipo}}</span>
           </div>
           <button @click="remover(itemLista.id)">X</button>
