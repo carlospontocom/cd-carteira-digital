@@ -1,0 +1,80 @@
+
+.container {
+  padding: 45px;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.header-carteira span {
+  left: 90%;
+  display: block;
+  letter-spacing: 1.4px;
+  color: #00000040;
+}
+
+.header-saldo{
+  display: flex;
+  gap:50px;
+}
+
+.the-saldo, .the-gastos{
+  border:1px solid #ccc;
+  padding: .5rem;
+}
+
+.title-saldo{
+  color:green;
+  font-weight: 800;
+}
+
+.title-gastos{
+  color:brown;
+  font-weight: 800;
+}
+
+.bar-add {
+  margin: 1.5rem 0 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input, .tipo {
+  padding: 10px 5px;
+}
+
+.form button {
+  background-color: seagreen;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.lista-contas li{
+  display: grid;
+  grid-template-columns: 150px auto 40px;
+  gap:10px;
+  align-items: center;
+  padding:10px 0;
+  border-bottom: 1px saddlebrown solid;
+}
+
+.lista-contas li span{
+  font-size: 13px;
+}
+
+.lista-contas button{
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 0px;
+} 
